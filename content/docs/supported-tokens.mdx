@@ -1,0 +1,43 @@
+---
+title: Supported Tokens
+icon: Coins
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Supported Tokens" />
+
+Lunark AI recognizes 69 major cryptocurrencies including native tokens, stablecoins, DeFi tokens, and Layer 2 tokens. You can use symbols like USDC, full names like USD Coin, or common aliases. The assistant resolves them automatically and handles decimal conversions.
+
+## Overview
+
+Only verified tokens are supported to protect against scam tokens. Token availability varies by network; the assistant validates token existence before operations.
+
+## Token Categories
+
+**Native Tokens**: ETH, MATIC, AVAX, BNB - used for gas and transfers on respective networks.
+
+**Stablecoins**: USDC, USDT, DAI, BUSD, FRAX - USD-pegged tokens available on most networks.
+
+**DeFi Tokens**: AAVE, COMP, UNI, SUSHI, CRV, LINK - protocol governance and utility tokens.
+
+**Layer 2 Tokens**: ARB, OP - native tokens for Arbitrum and Optimism.
+
+**Wrapped Tokens**: WETH, WBTC, WMATIC - ERC20 versions of native assets.
+
+## Examples
+
+```
+"What's my USDC balance?"
+"Send 100 DAI to alice"
+"Find the LINK token address"
+"Is ETH a native token?"
+```
+
+## Token Resolution
+
+The assistant searches by symbol and name. If multiple tokens match, specify the network to narrow results. Contract addresses are validated against known token lists.
+
+<Callout type="warn">
+Custom token support by contract address is planned for a future release.
+</Callout>

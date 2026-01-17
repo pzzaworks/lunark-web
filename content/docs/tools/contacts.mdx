@@ -1,0 +1,49 @@
+---
+title: Contact Tools
+icon: Contact
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Contact Tools" />
+
+The contact tools manage saved wallet addresses, enabling you to reference addresses by custom names instead of copying long hexadecimal strings. This reduces transfer errors and speeds up common operations.
+
+## Overview
+
+You can add, list, resolve, and delete contacts through natural language commands. All contact data is encrypted, tied to your wallet address, and syncs automatically across devices. When you reference a contact in any command, the assistant resolves it to the stored address.
+
+## Examples
+
+Adding:
+```
+"Add alice as 0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+"Save 0x987... as hardware-wallet"
+```
+
+Querying:
+```
+"Show my contacts"
+"What's alice's address?"
+"List all contacts"
+```
+
+Using:
+```
+"Send 100 USDC to alice"
+"Check hardware-wallet balance"
+```
+
+Removing:
+```
+"Delete contact alice"
+"Remove hardware-wallet from contacts"
+```
+
+## Validation
+
+Addresses are validated on save with checksum verification. ENS names are resolved to addresses before storage. Duplicate contact names are rejected.
+
+## Security
+
+Contacts are encrypted at rest, tied to your wallet address, and accessible only by you. Data syncs automatically when using the same wallet across devices.

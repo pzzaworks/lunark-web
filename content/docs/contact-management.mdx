@@ -1,0 +1,42 @@
+---
+title: Contacts
+icon: Users
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Contacts" />
+
+The contact system stores wallet addresses with custom names, enabling transfers by name instead of copying long hexadecimal addresses. Contacts are encrypted, tied to your wallet, and sync across devices automatically. When you reference a contact in a command, the assistant resolves it to the stored address.
+
+## Overview
+
+This eliminates copying addresses and reduces the risk of send errors from typos or clipboard issues. All contact operations are performed through natural language commands.
+
+## Examples
+
+Adding contacts:
+```
+"Add alice as 0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+"Save 0x987... as hardware-wallet"
+```
+
+Using contacts:
+```
+"Send 100 USDC to alice"
+"What's the balance of hardware-wallet?"
+```
+
+Managing contacts:
+```
+"Show my contacts"
+"Delete contact alice"
+```
+
+## Address Validation
+
+The assistant validates addresses on save, checking format correctness and converting to checksummed format. ENS names are resolved to addresses before storage. Duplicate contact names are rejected. Delete existing contacts before reusing names.
+
+## Best Practices
+
+Use descriptive names that indicate the address purpose: "coinbase-hot", "ledger-main", "mom", "company-treasury". Review contacts periodically and remove outdated entries.

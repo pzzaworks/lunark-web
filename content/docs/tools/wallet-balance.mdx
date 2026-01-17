@@ -1,0 +1,30 @@
+---
+title: Platform Balance
+icon: DollarSign
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Platform Balance" />
+
+The platform balance tool returns your USD credit balance used for AI assistant interactions. This balance is separate from your on-chain token holdings and is consumed with each message based on input and output token usage.
+
+## Overview
+
+Platform credits cover all AI costs including balance queries, transfers, and general conversation. The system tracks consumption in real-time and displays remaining balance on request. Credits can be topped up through the platform interface.
+
+## Examples
+
+```
+"What's my platform balance?"
+"How much credit do I have?"
+"Show my Lunark balance"
+```
+
+## Response
+
+Returns balance in USD format: `$10.0000`. No gas fees or wallet approval required. This queries internal platform data.
+
+<Callout type="info">
+For blockchain token balances (ETH, USDC, etc.), use the [Blockchain Balance](/docs/tools/blockchain-balance) tool instead.
+</Callout>

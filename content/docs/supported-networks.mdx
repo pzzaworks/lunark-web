@@ -1,0 +1,42 @@
+---
+title: Supported Networks
+icon: Network
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Supported Networks" />
+
+Lunark AI supports Ethereum and six additional EVM-compatible networks, each with different characteristics for gas costs, transaction speed, and token availability. The assistant handles network context automatically and can switch networks on request. All networks share the same command syntax.
+
+## Overview
+
+Specify the network in your command or let the assistant use your current connection. Gas fees vary significantly between networks. Layer 2 solutions like Polygon and Arbitrum offer substantially lower costs than Ethereum mainnet.
+
+## Networks
+
+| Network | Chain ID | Native Token | Typical Gas |
+|---------|----------|--------------|-------------|
+| Ethereum | 1 | ETH | $5-50 |
+| Polygon | 137 | MATIC | $0.01-0.10 |
+| Arbitrum | 42161 | ETH | $0.10-1.00 |
+| Base | 8453 | ETH | $0.05-0.50 |
+| Optimism | 10 | ETH | $0.10-1.00 |
+| Avalanche | 43114 | AVAX | $0.10-1.00 |
+| BNB Chain | 56 | BNB | $0.10-0.50 |
+
+## Examples
+
+```
+"Switch to Polygon"
+"What network am I on?"
+"Send 100 USDC on Arbitrum to alice"
+```
+
+<Callout type="info">
+Some wallets require manual approval when adding new networks for the first time.
+</Callout>
+
+## Planned Networks
+
+Future updates will add support for zkSync Era, Linea, Scroll, Mantle, and testnets including Sepolia and Mumbai.

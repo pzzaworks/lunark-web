@@ -1,0 +1,44 @@
+---
+title: Transfer Tokens
+icon: ArrowRightLeft
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Transfer Tokens" />
+
+The transfer tool sends native and ERC20 tokens to any valid recipient across all supported networks. It accepts wallet addresses, ENS names, and saved contacts, validating everything before building the transaction for your approval.
+
+## Overview
+
+Before execution, the tool checks your balance, verifies the recipient address format, estimates gas fees, and displays a complete transaction summary. All transfers require explicit wallet confirmation. Your private keys never leave your device. After approval, you receive a transaction hash and block explorer link to track confirmation.
+
+## Examples
+
+```
+"Send 0.5 ETH to 0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+"Transfer 100 USDC to alice"
+"Send 50 DAI to vitalik.eth on Ethereum"
+"Send 25 USDC on Arbitrum to bob"
+```
+
+## Parameters
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| amount | Yes | Token amount to send |
+| recipient | Yes | Address, ENS name, or contact |
+| token | Yes | Token symbol or contract |
+| network | No | Target network (defaults to current) |
+
+## Transaction Flow
+
+1. Validate recipient and check sender balance
+2. Estimate gas fees
+3. Display transaction summary
+4. Wait for wallet approval
+5. Broadcast and return transaction hash
+
+<Callout type="warning">
+Blockchain transactions are irreversible. Verify recipient addresses before confirming.
+</Callout>

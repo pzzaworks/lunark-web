@@ -1,0 +1,42 @@
+---
+title: Quick Start
+icon: Rocket
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Quick Start" />
+
+This guide walks you through connecting your wallet and making your first blockchain interactions with Lunark AI. You'll need a Web3 wallet like MetaMask, WalletConnect, or Coinbase Wallet with funds on a supported network. The entire setup takes less than a minute.
+
+## Overview
+
+Lunark AI operates as a non-custodial service. Your wallet credentials remain on your device, and all blockchain transactions require explicit approval through your wallet's signing interface.
+
+## Setup
+
+Click "Connect Wallet" to initiate the connection flow. Select your wallet provider and approve the connection request. You'll then sign a message to verify wallet ownership. This signature is free and doesn't incur gas fees.
+
+<Callout type="warn">
+The platform balance system is currently in private beta. Full functionality launches with Lunark AI v2.
+</Callout>
+
+## First Commands
+
+```
+"What's my ETH balance?"
+"Show my USDC on Polygon"
+"What networks do you support?"
+"List my contacts"
+```
+
+For token transfers, the assistant displays transaction details and estimated gas before requesting wallet approval:
+
+```
+"Send 10 USDC to 0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+"Transfer 0.1 ETH to alice"
+```
+
+## Next Steps
+
+Explore [Token Transfers](/docs/token-transfers) for send operations, [Contacts](/docs/contact-management) for address management, and the [Tools](/docs/tools) reference for all available commands.

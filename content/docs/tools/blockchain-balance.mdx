@@ -1,0 +1,36 @@
+---
+title: Blockchain Balance
+icon: Wallet
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Blockchain Balance" />
+
+The blockchain balance tool queries real-time token balances across all supported networks. It fetches data directly from blockchain nodes for native tokens like ETH, MATIC, and BNB, as well as ERC20 tokens including USDC, USDT, DAI, and over 60 others.
+
+## Overview
+
+You can check balances for your own wallet, external addresses, ENS names, or saved contacts. The tool validates addresses before querying and returns formatted balances with network context. All balance queries are free with no gas fees or wallet approval required.
+
+## Examples
+
+```
+"What's my ETH balance?"
+"Check USDC balance on Polygon"
+"How much does 0x742d35Cc... have?"
+"Show vitalik.eth balance"
+"What's alice's USDT balance?"
+```
+
+## Parameters
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| address | Yes | Wallet address, ENS name, or contact name |
+| token | Yes | Token symbol or contract address |
+| network | No | Network name (defaults to current) |
+
+## Response
+
+Returns balance with token symbol and network context. Balance queries are free with no gas fees or wallet approval required.

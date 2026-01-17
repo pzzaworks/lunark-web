@@ -1,0 +1,43 @@
+---
+title: Wallet Management
+icon: Wallet
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Wallet Management" />
+
+Lunark AI provides unified balance tracking across all seven supported networks. You can query native token and ERC20 balances through natural language without switching between block explorers or wallet interfaces. The platform maintains two separate balance types for different purposes.
+
+## Overview
+
+Blockchain balances represent your actual on-chain token holdings, queried in real-time from blockchain nodes. Platform balance represents USD credits for AI assistant usage, deducted per interaction based on token consumption.
+
+## Examples
+
+Blockchain balances:
+```
+"What's my ETH balance?"
+"Show USDC on Polygon"
+"Check my balance across all networks"
+```
+
+Platform balance:
+```
+"What's my platform balance?"
+"How much credit do I have?"
+```
+
+## Balance Types
+
+**Blockchain Balance**: Your actual on-chain holdings. Queried in real-time from blockchain nodes. Used for transfers and transactions. Subject to gas fees for operations.
+
+**Platform Balance**: USD credits for AI assistant usage. Deducted per interaction based on token consumption. Not stored on-chain.
+
+<Callout type="warning">
+Platform balance top-up is currently in private beta. Contact support for access.
+</Callout>
+
+## Usage Tracking
+
+Monitor AI usage by asking "Show my usage history" or "What have I spent today?". The history displays timestamps, token counts, costs per interaction, and running balance.

@@ -1,0 +1,34 @@
+---
+title: Chat Assistant
+icon: MessageSquare
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Chat Assistant" />
+
+The chat assistant is the core interface for interacting with Lunark AI. It processes natural language commands, maintains conversation context, resolves references to contacts and tokens, and validates all parameters before executing blockchain operations. You can phrase requests however feels natural. The assistant understands varied expressions of the same intent.
+
+## Overview
+
+Requests like "Send 10 USDC to john", "transfer 10 USDC to john", and "I want to send john 10 USDC" produce identical results. Context carries between messages. After checking your USDC balance, saying "send 50 to alice" correctly infers the token.
+
+Before executing transactions, the assistant displays a summary including recipient, amount, network, and estimated gas. Execution proceeds only after you approve in your wallet.
+
+## Capabilities
+
+```
+Balance Queries:     "What's my ETH balance on Arbitrum?"
+Token Transfers:     "Send 100 USDC to alice"
+Contact Management:  "Add treasury as 0x742d..."
+Network Operations:  "Switch to Polygon"
+Token Approvals:     "Approve 1000 DAI for Aave"
+```
+
+## Limitations
+
+The assistant currently supports balance checking, transfers, contacts, network switching, and approvals. Token swaps, NFT operations, and DeFi protocol interactions are planned for future releases.
+
+## Best Practices
+
+Use saved contacts instead of raw addresses to reduce errors. Be explicit with amounts and token symbols. For complex operations, break them into separate commands rather than combining multiple actions.

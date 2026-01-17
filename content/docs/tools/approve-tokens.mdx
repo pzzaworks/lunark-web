@@ -1,0 +1,41 @@
+---
+title: Token Approvals
+icon: Check
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Token Approvals" />
+
+The approval tool sets ERC20 token allowances for smart contracts, granting them permission to transfer your tokens on your behalf. This is required before using DEXs, lending protocols, and other DeFi applications.
+
+## Overview
+
+You can set specific amounts for controlled spending, unlimited allowances for convenience, or revoke existing approvals by setting the allowance to zero. The tool displays current allowances before requesting changes and requires wallet confirmation for all approval transactions.
+
+## Examples
+
+```
+"Approve 100 USDC for Uniswap"
+"Allow Aave to spend 1000 DAI"
+"Approve unlimited USDT for 0x7a250d..."
+"Revoke my DAI approval for SushiSwap"
+"How much USDC have I approved for Uniswap?"
+```
+
+## Parameters
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| token | Yes | Token symbol or contract |
+| spender | Yes | Contract address or protocol name |
+| amount | Yes | Amount or "unlimited" |
+| network | No | Target network (defaults to current) |
+
+## Security
+
+<Callout type="warning">
+Unlimited approvals are risky. If a contract is compromised, it can drain all approved tokens. Prefer specific amounts over unlimited when possible.
+</Callout>
+
+Regularly review and revoke unused approvals. The tool shows current allowance before requesting new approval.

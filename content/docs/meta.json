@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "---Getting Started---",
+    "what-is-lunark",
+    "quick-start",
+    "---Features---",
+    "chat-assistant",
+    "wallet-management",
+    "token-transfers",
+    "contact-management",
+    "usage-tracking",
+    "---Reference---",
+    "supported-tokens",
+    "supported-networks",
+    "usage-pricing",
+    "---Tools---",
+    "tools/wallet-balance",
+    "tools/blockchain-balance",
+    "tools/token-utils",
+    "tools/transfer-tokens",
+    "tools/approve-tokens",
+    "tools/defi-operations",
+    "tools/network-switching",
+    "tools/contacts",
+    "---Coming Soon---",
+    "tools/nft-management",
+    "tools/smart-contracts",
+    "tools/advanced-analytics"
+  ]
+}

@@ -1,0 +1,43 @@
+---
+title: Network Switching
+icon: RefreshCw
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Network Switching" />
+
+The network switching tool changes your active blockchain connection between the seven supported networks. After switching, all subsequent operations use the new network's configuration until you switch again.
+
+## Overview
+
+The assistant validates network names, updates internal context, and prompts your wallet to switch chains. If the requested network isn't already configured in your wallet, you may need to approve adding it. You can also specify networks inline with other commands for automatic switching.
+
+## Examples
+
+```
+"Switch to Polygon"
+"Change to Arbitrum"
+"Use Base network"
+"What network am I on?"
+```
+
+## Supported Networks
+
+| Network | Chain ID | Native Token |
+|---------|----------|--------------|
+| Ethereum | 1 | ETH |
+| Polygon | 137 | MATIC |
+| Arbitrum | 42161 | ETH |
+| Base | 8453 | ETH |
+| Optimism | 10 | ETH |
+| Avalanche | 43114 | AVAX |
+| BNB Chain | 56 | BNB |
+
+## Behavior
+
+The assistant validates the network name, updates context, and prompts your wallet to switch if needed. Some wallets require manual approval to add networks not already configured.
+
+<Callout type="info">
+You can also specify networks inline: "Send 100 USDC on Polygon to alice" switches automatically.
+</Callout>

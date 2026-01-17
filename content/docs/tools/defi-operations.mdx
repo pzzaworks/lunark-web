@@ -1,0 +1,95 @@
+---
+title: DeFi Operations
+icon: TrendingUp
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="DeFi Operations" />
+
+DeFi operations enable token swaps across major decentralized exchanges through natural language commands. The assistant automatically finds the best prices, estimates slippage, and handles approval requirements before executing trades.
+
+## Overview
+
+The swap tool queries multiple DEXes simultaneously to find optimal prices for your trades. It supports Uniswap, SushiSwap, PancakeSwap, Curve, and TraderJoe across all supported networks. All swaps require explicit wallet confirmation before execution.
+
+## Supported DEXes
+
+| DEX | Networks |
+|-----|----------|
+| Uniswap | Ethereum, Polygon, Arbitrum, Optimism, Base, BNB Chain, Avalanche |
+| SushiSwap | Ethereum, Polygon, Arbitrum, Optimism, BNB Chain, Avalanche |
+| PancakeSwap | BNB Chain, Ethereum, Arbitrum |
+| Curve | Ethereum, Polygon, Arbitrum, Optimism, Avalanche |
+| TraderJoe | Avalanche, Arbitrum |
+
+## Examples
+
+Basic swaps:
+```
+"Swap 100 USDC for ETH"
+"Trade 0.5 ETH for USDC"
+"Exchange 500 DAI to USDT"
+```
+
+Specify a DEX:
+```
+"Swap 100 USDC for ETH on Uniswap"
+"Trade MATIC for USDC on SushiSwap"
+```
+
+Custom slippage:
+```
+"Swap 1000 USDC for ETH with 1% slippage"
+"Trade 50 DAI to USDT with 0.3% slippage"
+```
+
+## Parameters
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| fromToken | Yes | Token to swap from (symbol or address) |
+| toToken | Yes | Token to swap to (symbol or address) |
+| amount | Yes | Amount of fromToken to swap |
+| dex | No | Specific DEX (uniswap, sushiswap, etc.) |
+| slippage | No | Slippage tolerance in % (default 0.5%) |
+
+## How It Works
+
+1. **Quote Fetching**: Queries all available DEXes for the best price
+2. **Price Comparison**: Ranks quotes by output amount
+3. **Approval Check**: Verifies if token approval is needed
+4. **Transaction Preparation**: Builds swap transaction with slippage protection
+5. **User Confirmation**: Sends to wallet for approval
+6. **Execution**: Broadcasts transaction after approval
+
+## Slippage Protection
+
+Default slippage tolerance is 0.5%. The minimum output amount is calculated as:
+
+```
+minOutput = expectedOutput * (1 - slippage/100)
+```
+
+If the actual output falls below this minimum, the transaction reverts automatically.
+
+<Callout type="info">
+For volatile token pairs or large trades, consider increasing slippage tolerance to avoid failed transactions.
+</Callout>
+
+## Token Approvals
+
+ERC20 tokens require approval before swapping. If approval is needed, the assistant will notify you and prepare the approval transaction for the exact amount needed.
+
+<Callout type="info">
+The assistant automatically handles approval amounts. Each swap approves only the required amount to minimize smart contract exposure.
+</Callout>
+
+## Best Practices
+
+- Start with small test swaps when trading new token pairs
+- Check liquidity depth for large trades to minimize price impact
+- Use specific DEXes when you prefer a particular protocol
+- Monitor gas prices on Ethereum mainnet for optimal timing
+- Layer 2 networks offer significantly lower swap fees

@@ -1,0 +1,40 @@
+---
+title: Token Utilities
+icon: Search
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Token Utilities" />
+
+The token utility tools help discover contract addresses, validate token information, and explore available operations. These are read-only queries that require no wallet approval or gas fees.
+
+## Overview
+
+Use these tools to find token addresses by symbol or name, check whether a token is native to a network, and list all available blockchain operations. The assistant searches by symbol, name, and partial matches, returning verified token data to protect against scams.
+
+## Tools
+
+**resolve_token**: Find token contract addresses by symbol or name.
+
+**is_native_token**: Check if a symbol represents a native blockchain token.
+
+**list_tools**: Display all available blockchain operations.
+
+## Examples
+
+```
+"Find USDC token"
+"What's the address for LINK?"
+"Is ETH a native token?"
+"What tools do you have?"
+"Search for Uniswap token"
+```
+
+## Token Resolution
+
+The assistant searches by symbol (UNI), name (Uniswap), and partial matches. Results include contract address, decimals, and network availability. If multiple tokens match, specify the network to narrow results.
+
+<Callout type="info">
+Only verified tokens are recognized to protect against scam tokens. Custom token support by contract address is planned for a future release.
+</Callout>

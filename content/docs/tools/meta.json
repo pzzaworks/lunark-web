@@ -1,0 +1,25 @@
+{
+  "title": "Tools",
+  "description": "Available blockchain tools and upcoming features",
+  "root": true,
+  "icon": "Wrench",
+  "pages": [
+    "---Balance & Tokens---",
+    "wallet-balance",
+    "blockchain-balance",
+    "token-utils",
+    "---Transactions---",
+    "transfer-tokens",
+    "approve-tokens",
+    "---DeFi---",
+    "defi-operations",
+    "---Network---",
+    "network-switching",
+    "---Contacts---",
+    "contacts",
+    "---Coming Soon---",
+    "nft-management",
+    "smart-contracts",
+    "advanced-analytics"
+  ]
+}

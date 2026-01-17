@@ -1,0 +1,21 @@
+{
+  "name": "Lunark AI",
+  "short_name": "Lunark AI",
+  "description": "Making blockchain human-friendly with Lunark Agent. Interact with the blockchain using natural language. Check balances, transfer funds, or analyze market trends. Powered by Astreus AI (https://astreus.org) framework.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["web3", "ai"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

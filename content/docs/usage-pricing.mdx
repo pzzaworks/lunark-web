@@ -1,0 +1,53 @@
+---
+title: Pricing
+icon: DollarSign
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Pricing" />
+
+Lunark AI uses usage-based pricing with no subscriptions or hidden fees. Each interaction consumes input tokens from your message and output tokens from the assistant's response. Platform costs are separate from blockchain gas fees. You pay Lunark for AI processing and pay network miners for on-chain transactions.
+
+## Overview
+
+There are no monthly fees, minimums, or hidden charges. You pay only for the AI tokens you consume, with costs clearly displayed for each interaction.
+
+## Pricing Structure
+
+| Component | Cost |
+|-----------|------|
+| Input tokens | $0.15 per 1M tokens |
+| Output tokens | $0.60 per 1M tokens |
+| Platform fee | 5% |
+
+**Typical costs:**
+- Balance check: ~$0.00003
+- Token transfer: ~$0.0001
+- Complex query: ~$0.0003
+
+## Examples
+
+```
+"What's my platform balance?"
+"Show my usage history"
+"How much have I spent today?"
+```
+
+## Gas Fees
+
+Blockchain operations incur gas fees paid to network validators:
+
+| Network | Typical Transfer Fee |
+|---------|---------------------|
+| Polygon | $0.01-0.10 |
+| Arbitrum | $0.10-1.00 |
+| Ethereum | $5-50 |
+
+<Callout type="warn">
+Platform balance top-up is currently in private beta. Full availability launches with v2.
+</Callout>
+
+## Cost Optimization
+
+Keep queries concise - "ETH balance" costs less than verbose requests. Use saved contacts instead of pasting addresses. The assistant maintains context, so avoid repeating information already in the conversation.

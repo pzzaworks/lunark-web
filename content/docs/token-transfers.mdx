@@ -1,0 +1,44 @@
+---
+title: Token Transfers
+icon: Send
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Token Transfers" />
+
+The transfer tool sends native and ERC20 tokens to any valid address, ENS name, or saved contact across all seven supported networks. Before execution, it validates your balance, verifies the recipient address format, estimates gas fees, and displays a transaction summary. All transfers require explicit wallet confirmation.
+
+## Overview
+
+The tool supports native tokens (ETH, MATIC, AVAX, BNB) and ERC20 tokens (USDC, USDT, DAI, and 60+ others). After wallet approval, you receive a transaction hash and block explorer link upon completion.
+
+## Examples
+
+```
+"Send 0.5 ETH to 0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+"Transfer 100 USDC to alice on Polygon"
+"Send 50 DAI to vitalik.eth"
+```
+
+The assistant can switch networks automatically if you specify one different from your current connection:
+
+```
+"Send 25 USDC on Arbitrum to bob"
+```
+
+## Transaction Flow
+
+1. Parse request and identify token, amount, recipient, network
+2. Validate recipient address and check balance
+3. Estimate gas and display transaction summary
+4. Wait for wallet approval
+5. Broadcast transaction and return hash
+
+<Callout type="warning">
+Blockchain transactions are irreversible. Always verify recipient addresses before confirming.
+</Callout>
+
+## Best Practices
+
+Save frequently used addresses as contacts to minimize errors. Start with small test amounts when sending to new addresses. Ensure sufficient native token balance for gas fees. ERC20 transfers require gas paid in the network's native token.

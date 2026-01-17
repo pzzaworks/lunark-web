@@ -1,0 +1,41 @@
+---
+title: Usage Tracking
+icon: Activity
+---
+
+import { DocImage } from '@/components/DocImage';
+
+<DocImage title="Usage Tracking" />
+
+Every interaction with Lunark AI consumes tokens based on message length and response complexity. The platform tracks all usage in real-time, providing detailed breakdowns of consumption and costs. Input tokens represent your messages, output tokens represent responses, with output costing more due to higher computational requirements.
+
+## Overview
+
+The usage system provides transparency into AI costs, helping you understand consumption patterns and optimize usage. All costs are displayed clearly with no hidden fees.
+
+## Examples
+
+```
+"Show my usage history"
+"What have I spent today?"
+"How much credit do I have left?"
+```
+
+## Cost Breakdown
+
+Each interaction records:
+- Timestamp
+- Input token count
+- Output token count
+- Base cost
+- Platform fee (5%)
+- Total cost
+- Running balance
+
+## Optimization Tips
+
+Keep queries concise - "ETH balance" costs less than verbose requests. Use saved contacts instead of pasting long addresses. Leverage conversation context rather than repeating information. Combine related questions into single messages when possible.
+
+<Callout type="info">
+The assistant warns you when balance runs low. Operations stop at zero balance until top-up.
+</Callout>

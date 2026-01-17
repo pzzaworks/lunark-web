@@ -1,0 +1,12 @@
+// @ts-nocheck
+import { browser } from 'fumadocs-mdx/runtime/browser';
+import type * as Config from '../source.config';
+
+const create = browser<typeof Config, import("fumadocs-mdx/runtime/types").InternalTypeConfig & {
+  DocData: {
+  }
+}>();
+const browserCollections = {
+  docs: create.doc("docs", {"chat-assistant.mdx": () => import("../content/docs/chat-assistant.mdx?collection=docs"), "contact-management.mdx": () => import("../content/docs/contact-management.mdx?collection=docs"), "quick-start.mdx": () => import("../content/docs/quick-start.mdx?collection=docs"), "supported-networks.mdx": () => import("../content/docs/supported-networks.mdx?collection=docs"), "supported-tokens.mdx": () => import("../content/docs/supported-tokens.mdx?collection=docs"), "token-transfers.mdx": () => import("../content/docs/token-transfers.mdx?collection=docs"), "usage-pricing.mdx": () => import("../content/docs/usage-pricing.mdx?collection=docs"), "usage-tracking.mdx": () => import("../content/docs/usage-tracking.mdx?collection=docs"), "wallet-management.mdx": () => import("../content/docs/wallet-management.mdx?collection=docs"), "what-is-lunark.mdx": () => import("../content/docs/what-is-lunark.mdx?collection=docs"), "tools/advanced-analytics.mdx": () => import("../content/docs/tools/advanced-analytics.mdx?collection=docs"), "tools/approve-tokens.mdx": () => import("../content/docs/tools/approve-tokens.mdx?collection=docs"), "tools/blockchain-balance.mdx": () => import("../content/docs/tools/blockchain-balance.mdx?collection=docs"), "tools/contacts.mdx": () => import("../content/docs/tools/contacts.mdx?collection=docs"), "tools/defi-operations.mdx": () => import("../content/docs/tools/defi-operations.mdx?collection=docs"), "tools/network-switching.mdx": () => import("../content/docs/tools/network-switching.mdx?collection=docs"), "tools/nft-management.mdx": () => import("../content/docs/tools/nft-management.mdx?collection=docs"), "tools/smart-contracts.mdx": () => import("../content/docs/tools/smart-contracts.mdx?collection=docs"), "tools/token-utils.mdx": () => import("../content/docs/tools/token-utils.mdx?collection=docs"), "tools/transfer-tokens.mdx": () => import("../content/docs/tools/transfer-tokens.mdx?collection=docs"), "tools/wallet-balance.mdx": () => import("../content/docs/tools/wallet-balance.mdx?collection=docs"), }),
+};
+export default browserCollections;
